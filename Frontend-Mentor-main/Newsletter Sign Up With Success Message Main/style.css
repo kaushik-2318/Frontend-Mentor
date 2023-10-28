@@ -1,0 +1,328 @@
+@font-face {
+    font-family: MyFont;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+  }
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: 'MyFont';
+    background-color: var(--CharcoalGrey);
+    color: var(--DarkSlateGrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 0px 0px;
+}
+.Newsletter{
+    display: inline-flex;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--White);
+    border-radius: 40px;
+    width: 950px;
+    height: 624px;
+    justify-content: space-between;
+}
+.imge{
+    background-image: url("Images/illustration-sign-up-desktop.svg");
+    width: 500px;
+    height: 624px;
+    background-repeat: no-repeat;
+    margin: 15px 0px 15px 0px;
+}
+.head{
+    font-size: 65px;
+    margin: 80px 0px 0px 50px;
+}
+.p1{
+    font-size: 20px;
+    margin: 31px 0px 30px 50px;  
+}
+ul{
+    list-style: url(Images/icon-list.svg);
+    margin: 0px 0px 0px 50px;
+}
+.t1{
+    position: relative;
+    top: -5px;
+    left: 5px;
+    margin-bottom: 15px;
+}
+.last{
+    margin: 30px 0px 0px 50px;
+    font-size: 18px;
+}
+input{
+    width: 400px;
+    margin: 15px 0px 0px 50px;
+    border-radius: 10px;
+    height: 50px;
+    padding-left: 20px;
+}
+button{
+    width: 424px;
+    margin: 15px 0px 0px 50px;
+    border-radius: 10px;
+    height: 50px;
+    padding-left: 20px;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    cursor: pointer;
+    border: none;
+}
+.but{
+    background-image: linear-gradient(to right, #FF6644 , #FF5D5E, #FF5476);
+}
+.card{
+    margin-top: 80px;
+    background-color: var(--White);
+    color: var(--DarkSlateGrey);
+    width: 470px;
+    height: 490px;
+    border-radius: 50px;
+    display: none;
+}
+.ima1{
+    margin: 30px 10px 20px 50px;
+}
+.c1{
+    font-size: 65px;
+    margin: 0px 0px 20px 50px;
+}
+.c2{
+    margin: 0px 0px 20px 50px;  
+}
+.c3{
+    width: 350px;
+    cursor: pointer;
+    border: none;
+}
+@media(max-width: 375px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        background-color: var(--White);
+    }
+    .imge{
+        margin: 0px 0px 0px 0px;
+        background-image: url("Images/illustration-sign-up-mobile.svg");
+        background-repeat: no-repeat;
+        /* background-position: center; */
+        /* background-size: cover; */
+        width: 369px;
+        height: 900px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .Newsletter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 375px;
+        height: 842px;
+        border-radius: 0px;
+    }
+    .head{
+        margin: 90px 0px 0px 25px;
+        font-size: 50px;
+    }
+    .p1{
+        margin: 31px 0px 30px 25px;
+    }
+    .left{
+        position: relative;
+        width: 375px;
+        top: -50px;
+        border-radius: 10px;
+    }
+    button{
+        width: 324px;
+        margin: 15px 0px 30px 25px;
+    }
+    input{
+        width: 300px;
+        margin: 15px 0px 0px 25px;
+    }
+    .last{
+        margin: 40px 0px 0px 25px;
+    }
+    .last footer{
+        align-items: center;
+    }
+    ul .t1{
+        font-size: 18px;
+        width: 300px;
+    }
+    .card{
+        margin: 150px 0px 0px 0px;
+        display: none;
+    }
+    .c1, .c2{
+        position: relative;
+        left: -20px;
+    }
+    .c1{
+        font-size: 50px;
+    }
+    .c3{
+        width: 324px;
+        margin: 200px 0px 30px 25px;
+    }
+}
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}

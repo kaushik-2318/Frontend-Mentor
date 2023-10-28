@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --VerydarkbluemainBG: hsl(217, 54%, 11%);
+    --VerydarkbluecardBG: hsl(216, 50%, 16%);
+    --Verydarkblueline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--VerydarkbluemainBG);
+}
+.container{
+    background-color: var(--VerydarkbluecardBG);
+    margin: auto;
+    margin-top: 150px;
+    width: 350px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px hsl(0, 0%, 100%);
+}
+.img1{
+    position: relative;
+    border-radius: 10px;
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 325px;
+    margin-left: 25px;
+    top: 25px;
+}
+.img1:hover{
+    background-image: url("images/icon-view.svg");
+}
+h2{
+    color: var(--White);
+    margin-left: 25px;
+    margin-top: 45px;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+h2:hover{
+    color: var(--Cyan);
+}
+.t1{
+    color: var(--White);
+    text-align: left;
+    margin-left: 25px;
+    color: var(--Softblue);
+    margin-bottom: 1rem;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin-left: -15px;
+    margin-top: 20px;
+}
+.nav2{
+    position: relative;
+    flex-basis: 55%;
+    color: var(--Cyan);
+    top: -2px;
+    left: 3px;
+}
+.nav4{
+    position: relative;
+    color: var(--Softblue);
+    top: -2px;
+    left: 3px;
+}
+hr{
+    width: 275px;
+    color: var(--Verydarkblueline);
+    margin-top: 20px;
+    
+}
+.d1{
+    padding-top: 10px;
+}
+.img2{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    margin-left: 25px;
+}
+.k{
+    position: relative;
+    top: -10px;
+    left: 10px;
+    color: var(--Softblue);
+}
+.kk{
+    color: var(--White);
+}
+.kk:hover{
+    color: var(--Cyan);
+}
+
+
+
+
+.attribution{
+    margin-top: 15px;
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%);
+}

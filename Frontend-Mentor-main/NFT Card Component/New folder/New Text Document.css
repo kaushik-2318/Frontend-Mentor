@@ -1,0 +1,294 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    overflow: hidden;
+    background-color: hsl(217, 54%, 11%);
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+    /* border: 1px solid rgb(169, 236, 169); */
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* main */
+
+#main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 40rem;
+    width: 23.5rem;
+    position: static;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    color: white;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1rem 3rem;
+}
+
+.image-container {
+    height: 24rem;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img.eth-img {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 1.5rem;
+    border-radius: 8px;
+    width: 87%;
+}
+
+.overlay {
+    background-color: #00fef7;
+    position: absolute;
+    top: 0;
+    border: 0;
+    left: 0;
+    right: 0;
+    height: 86%;
+    opacity: 0;
+    border-radius: 8px;
+    width: 87%;
+    margin: 1.5rem;
+}
+
+.view {
+    width: 14%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.image-container:hover .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.image-container:hover .overlay+.view {
+    display: block;
+}
+
+
+img.eth-icon,
+img.time-icon,
+img.profile-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 1.5rem;
+    border-radius: 8px;
+    width: 86%;
+}
+
+.eth-info {
+    width: inherit;
+    height: 16.5rem;
+    padding: 0 1.7rem;
+}
+
+.card h1 {
+    display: inline;
+    font-size: 23px;
+}
+
+.description {
+    width: fit-content;
+    font-size: larger;
+    margin-top: .7rem;
+    height: auto;
+    position: inherit;
+    color: hsl(216, 28.6%, 55.5%)
+}
+
+.eth-stats {
+    display: flex;
+    justify-content: center;
+    width: initial;
+    height: 4.5rem;
+    overflow: hidden;
+    position: static;
+    border-bottom: 1px solid #6a6a6a56;
+}
+
+.eth-data-1 {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+}
+
+.eth-data-1 img {
+    width: 7rem;
+    height: fit-content;
+    position: relative;
+    top: 0;
+    left: -1.5rem;
+}
+
+.eth-data-1 span {
+    width: inherit;
+    height: fit-content;
+    margin-top: 1.3rem;
+    margin-left: -2.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: hsl(178, 100%, 50%);
+}
+
+.eth-data-2 {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+}
+
+.eth-data-2 img {
+    width: 22rem;
+    height: fit-content;
+    top: .10rem;
+    right: -2rem;
+    position: relative;
+}
+
+.eth-data-2 span {
+    height: fit-content;
+    margin-top: 1.4rem;
+    margin-left: 14px;
+    letter-spacing: .5px;
+    color: hsl(216, 28.6%, 55.5%)
+}
+
+.footer {
+    width: initial;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+img.profile-img {
+    padding: 0;
+    width: 11rem;
+    margin-top: 1.2rem;
+    border: .1rem solid white;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+p.eth-name {
+    height: fit-content;
+    margin-top: 1.45rem;
+    margin-left: -0.5rem;
+    letter-spacing: .8px;
+    color: hsl(216, 28.6%, 55.5%)
+}
+
+.eth-name span {
+    color: #fff;
+}
+
+.eth-name span:hover {
+    color: hsl(178, 100%, 50%);
+    transition: all 0.5s;
+}
+
+.eth-info h1.heading:hover {
+    color: hsl(178, 100%, 50%);
+    transition: all 0.5s;
+}
