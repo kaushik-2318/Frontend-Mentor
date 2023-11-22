@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="text">
+        <h1>WE'RE LAUNCHING SOON</h1>
+      </div>
+
+      <div class="panel">
+
+        <div class="date">
+          <div id="date_panel">
+            08
+          </div>
+          <div>Days</div>
+        </div>
+
+        <div class="hours">
+          <div id="hour_panel">
+            23
+          </div>
+          <div>Hours</div>
+        </div>
+
+        <div class="minutes">
+          <div id="minutes_panel">
+            55
+          </div>
+          <div>Minutes</div>
+        </div>
+
+        <div class="seconds">
+          <div id="second_panel">
+            41
+          </div>
+          <div>Seconds</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <a href="">
+        <li><img src="/images/icon-facebook.svg" alt=""></li>
+      </a>
+      <a href="">
+        <li><img src="/images/icon-instagram.svg" alt=""></li>
+      </a>
+      <a href="">
+        <li><img src="/images/icon-pinterest.svg" alt=""></li>
+      </a>
+    </ul>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kaushik Verma</a>.
+  </div>
+</body>
+<script>
+  const timer = () => {
+    const endDate = new Date("December 25, 2023 00:00:00").getTime()
+    const now = new Date().getTime()
+    const difference = (endDate - now)
+
+    const second = 1000
+    const minute = second * 60
+    const hour = minute * 60
+    const day = hour * 24
+
+    const timeday = Math.floor(difference / day)
+    const timehour = Math.floor((difference % day) / hour)
+    const timeminute = Math.floor((difference % hour) / minute)
+    const timesecond = Math.floor((difference % minute) / second)
+
+    document.getElementById("date_panel").innerHTML = timeday
+    document.getElementById("hour_panel").innerHTML = timehour
+    document.getElementById("minutes_panel").innerHTML = timeminute
+    document.getElementById("second_panel").innerHTML = timesecond
+  }
+  setInterval(timer, 1000)
+
+</script>
+
+</html>

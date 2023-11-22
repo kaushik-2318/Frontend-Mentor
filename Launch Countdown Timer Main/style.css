@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,700;1,700&display=swap');
+
+:root {
+    --GrayishBlue: hsl(237, 18%, 59%);
+    --SoftRed: hsl(345, 95%, 68%);
+    --White: hsl(0, 0%, 100%);
+    --DarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --VeryDarkBlue: hsl(234, 17%, 12%);
+    --VeryDarkBlueBlack: hsl(235, 16%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--VeryDarkBlueBlack);
+    background-image: url(/images/bg-stars.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 102vh;
+}
+
+main {
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 75vh;
+}
+
+.text {
+    padding-top: 10vh;
+}
+
+h1 {
+    color: var(--White);
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+}
+
+.panel {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.date,
+.hours,
+.minutes,
+.seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--GrayishBlue);
+}
+
+#date_panel,
+#hour_panel,
+#minutes_panel,
+#second_panel {
+    height: 125px;
+    height: 16vh;
+    width: 125px;
+    width: 16vh;
+    background-color: var(--DarkDesaturatedBlue);
+    border-radius: 5px;
+    color: var(--SoftRed);
+    display: grid;
+    place-content: center;
+    font-size: 70px;
+}
+
+footer {
+    background-image: url(/images/pattern-hills.svg);
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+ul {
+    margin-top: 5vh;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 410px) {
+    .text {
+        padding-top: 6vh;
+    }
+}

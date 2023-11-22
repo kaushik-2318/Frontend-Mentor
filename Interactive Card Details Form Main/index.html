@@ -15,6 +15,28 @@
   <title>Frontend Mentor | Interactive card details form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script>
+    module.exports = {
+  theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1350px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
+  }
+}
+  </script>
   <style>
     * {
       margin: 0;
@@ -40,7 +62,7 @@
   <div class="flex">
     <section class="h-screen w-4/12 bg-no-repeat" style="background-image: url(Assets/bg-main-desktop.png)">
       <img class="absolute pt-36 pl-48 z-10" src="Assets/card-logo.svg" alt="logo">
-      <img class="absolute pt-28 pl-40" src="Assets/bg-card-front.png" alt="front">
+      <img class="absolute pt-28 pl-40 scale-50 xl:scale-100" src="Assets/bg-card-front.png" alt="front">
       <h1 class="absolute pt-64 pl-48 z-10 tracking-[.7em] text-white" id="number">0000 0000 0000 0000</h1>
       <div class="absolute pt-[19rem] pl-48 z-10 text-white">
         <span class="absolute w-72" id="name">Jane Appleseed</span>
@@ -101,10 +123,6 @@
       </div>
     </section>
   </div>
-
-
-
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Kaushik</a>.
