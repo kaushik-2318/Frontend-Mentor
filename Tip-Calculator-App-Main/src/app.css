@@ -1,0 +1,8 @@
+[name="tip"]:hover  + .tip-btn{
+    background-color: var(--StrongCyan);
+}
+
+[name="tip"]:checked + .tip-btn {
+    background-color: var(--StrongCyan);
+    color: var(--VeryDarkCyan);
+}

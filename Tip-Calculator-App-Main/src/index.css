@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-#active{
-    background-color: #26c2ae;
-    color: #002b2d;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
--StrongCyan: hsl(172, 67%, 45%);
--VeryDarkCyan: hsl(183, 100%, 15%);
--DarkGrayishCyan: hsl(186, 14%, 43%);
--GrayishCyan: hsl(184, 14%, 56%);
--LightGrayishCyan: hsl(185, 41%, 84%);
--VeryLightGrayishCyan: hsl(189, 41%, 97%);
--White: hsl(0, 0%, 100%);
+:root {
+    --StrongCyan: hsl(172, 67%, 45%);
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+    --DarkGrayishCyan: hsl(186, 14%, 43%);
+    --GrayishCyan: hsl(184, 14%, 56%);
+    --LightGrayishCyan: hsl(185, 41%, 84%);
+    --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
 }
 
-*{
+* {
     font-family: "Space Mono", monospace;
 }

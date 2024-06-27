@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "StrongCyan": "var(--StrongCyan)",
+        "VeryDarkCyan": "var(--VeryDarkCyan)",
+        "DarkGrayishCyan": "var(--DarkGrayishCyan)",
+        "GrayishCyan": "var(--GrayishCyan)",
+        "LightGrayishCyan": "var(--LightGrayishCyan)",
+        "VeryLightGrayishCyan": "var(--VeryLightGrayishCyan)",
+        "White": "var(--White)",
+      }
+    },
   },
   plugins: [],
 }
