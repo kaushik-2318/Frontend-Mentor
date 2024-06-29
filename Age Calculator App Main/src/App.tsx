@@ -14,20 +14,20 @@ function App() {
     days: 0,
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (validate()) {
-      const result = calculateAge(day, month, year);
+      const result = calculateAge(Number(day), Number(month), Number(year));
       setAgeResult(result);
     }
   };
 
-  const validateDate = (day, month, year) => {
-    const inputDate = new Date(year, month - 1, day);
+  const validateDate = (day: Number, month: Number, year: Number) => {
+    const inputDate = new Date(Number(year), Number(month) - 1, Number(day));
     if (
-      inputDate.getDate() !== parseInt(day) ||
-      inputDate.getMonth() + 1 !== parseInt(month) ||
-      inputDate.getFullYear() !== parseInt(year)
+      inputDate.getDate() !== day ||
+      inputDate.getMonth() + 1 !== month ||
+      inputDate.getFullYear() !== year
     ) {
       return false;
     }
@@ -51,15 +51,15 @@ function App() {
       tempErrors.year = "Year must be 4 digits";
     else if (parseInt(year) > currentYear)
       tempErrors.year = "Must be in the past";
-    else if (!validateDate(day, month, year))
+    else if (!validateDate(Number(day), Number(month), Number(year)))
       tempErrors.day = "The date is invalid";
 
     setErrors(tempErrors);
     return Object.values(tempErrors).every((x) => x === "");
   };
 
-  const calculateAge = (day, month, year) => {
-    const birthDate = new Date(year, month - 1, day);
+  const calculateAge = (day: Number, month: Number, year: Number) => {
+    const birthDate = new Date(Number(year), Number(month) - 1, Number(day));
     const currentDate = new Date();
 
     let ageYear = currentDate.getFullYear() - birthDate.getFullYear();
@@ -68,7 +68,7 @@ function App() {
 
     if (ageDay < 0) {
       ageMonth--;
-      ageDay += new Date(year, month, 0).getDate();
+      ageDay += new Date(Number(year), Number(month), 0).getDate();
     }
 
     if (ageMonth < 0) {
