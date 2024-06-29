@@ -1,52 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
-
 <body>
-  <main>
-    <div class="input">
-      <div>
-        <h6>DAY</h6>
-        <input type="number" id="day" placeholder="DD" min="1" max="31" />
-        <p class="error"></p>
-      </div>
-
-      <div>
-        <h6>MONTH</h6>
-        <input type="number" id="month" placeholder="MM" min="1" max="12" />
-        <p class="error"></p>
-      </div>
-
-      <div>
-        <h6>YEAR</h6>
-        <input type="number" id="year" placeholder="YYYY" min="1900" max="2020" />
-        <p class="error"></p>
-      </div>
-    </div>
-  </main>
-
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
-
 </html>
