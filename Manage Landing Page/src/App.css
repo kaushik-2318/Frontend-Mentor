@@ -1,0 +1,59 @@
+.background {
+    background: url('./assets/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 127%;
+    background-position-y: 250%;
+}
+
+.backgroundabout {
+    background: url('./assets/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-position-y: -30%;
+    background-position-x: -50%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: #3e52a3;
+}
+
+.cta {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+}
+.cta::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url("./assets/bg-tablet-pattern.svg"), url("./assets/bg-tablet-pattern.svg");
+    background-position: -15rem -5rem, 80rem -42rem;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
