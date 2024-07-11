@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <div>
-        <NavBar panel={isopen} setpanel={setIsopen} />
+        <NavBar panel={isopen} setPanelOpen={setIsopen} />
         <main className="background md:h-screen flex justify-center items-center md:p-28 py-10 px-12 gap-10 overflow-hidden flex-col-reverse md:flex-row">
           <div className="md:w-1/2 h-full flex md:justify-end md:items-start justify-center items-center flex-col">
             <div className="md:text-6xl text-4xl font-bold text-[var(--DarkBlue)] text-center md:text-left">
