@@ -14,5 +14,5 @@ This project is an IP Address Tracker built with React and Leaflet. It allows us
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GITHUB](https://github.com/kaushik-2318/Frontend-Mentor/tree/main/IP%20Address%20Tracker%20Main)
+- Live Site URL: [Netlify](https://ip-address-tracker-2318.netlify.app/)
