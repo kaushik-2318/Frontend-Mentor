@@ -33,19 +33,35 @@ function App() {
 
       try {
         const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=8.8.8.8`)
+        .then((res)=>{
+          if(res.ok){
+            alert("Done")
+          }
+          throw new Error('API Request Full')
+        })
         const data = await res.json();
         setInitialdata(data)
       } catch (error) {
-        console.log(error);
+        alert(error)
       }
     }
     getInitialdata()
   }, [newIP])
 
   const getNewdata = async () => {
-    const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&${ipRegex.test(newIP) ? `ipAddress=${newIP}` : `${domainRegex.test(newIP) ? `&domain=${newIP}` : ""}`}`)
-    const data = await res.json();
-    setInitialdata(data)
+    try {
+      const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&${ipRegex.test(newIP) ? `ipAddress=${newIP}` : `${domainRegex.test(newIP) ? `&domain=${newIP}` : ""}`}`)
+        .then((res) => {
+          if (res.ok) {
+            alert("Done")
+          }
+          throw new Error('API Request Full')
+        })
+      const data = await res.json();
+      setInitialdata(data)
+    } catch (error) {
+      alert(error)
+    }
   }
 
   function handleSubmit(e) {
