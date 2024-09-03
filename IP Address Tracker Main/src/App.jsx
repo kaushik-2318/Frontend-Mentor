@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, useMap, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css"
 import { useEffect, useState } from 'react'
 import L from 'leaflet'
-
+import PropTypes from 'prop-types';
 import background from './assets/pattern-bg-desktop.png'
 import iconUrl from './assets/icon-location.svg'
 import arrow from './assets/icon-arrow.svg'
@@ -29,39 +29,22 @@ function App() {
 
 
   useEffect(() => {
+
     const getInitialdata = async () => {
+      const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=8.8.8.8`)
 
-      try {
-        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=8.8.8.8`)
-        .then((res)=>{
-          if(res.ok){
-            alert("Done")
-          }
-          throw new Error('API Request Full')
-        })
-        const data = await res.json();
-        setInitialdata(data)
-      } catch (error) {
-        alert(error)
-      }
-    }
-    getInitialdata()
-  }, [newIP])
-
-  const getNewdata = async () => {
-    try {
-      const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&${ipRegex.test(newIP) ? `ipAddress=${newIP}` : `${domainRegex.test(newIP) ? `&domain=${newIP}` : ""}`}`)
-        .then((res) => {
-          if (res.ok) {
-            alert("Done")
-          }
-          throw new Error('API Request Full')
-        })
       const data = await res.json();
       setInitialdata(data)
-    } catch (error) {
-      alert(error)
     }
+    getInitialdata()
+
+  }, [apiKey])
+
+  const getNewdata = async () => {
+    const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&${ipRegex.test(newIP) ? `ipAddress=${newIP}` : `${domainRegex.test(newIP) ? `&domain=${newIP}` : ""}`}`)
+
+    const data = await res.json();
+    setInitialdata(data)
   }
 
   function handleSubmit(e) {
@@ -69,8 +52,11 @@ function App() {
     getNewdata()
   }
 
-  const position = initialdata ? [initialdata?.location.lat, initialdata?.location.lng] : [0, 0]
+  ChangeView.propTypes = {
+    center: PropTypes.arrayOf(PropTypes.number).isRequired,
+  };
 
+  const position = initialdata && initialdata.location ? [initialdata.location.lat, initialdata.location.lng] : [0, 0];
   function ChangeView({ center }) {
     const map = useMap();
     useEffect(() => {
@@ -107,15 +93,15 @@ function App() {
             <div className='uppercase font-semibold text-sm md:border-r-2 px-5'>
               Location
               <div className='text-black font-semibold text-lg capitalize'>
-                {initialdata ? initialdata.location.city : 'Loading...'}, {initialdata ? initialdata.location.country : 'Loading...'}
+                {initialdata && initialdata.location ? `${initialdata.location.city}, ${initialdata.location.country}` : 'Loading...'}
                 <br />
-                {initialdata ? initialdata.location.postalCode : 'Loading...'}
+                {initialdata && initialdata.location ? initialdata.location.postalCode : 'Loading...'}
               </div>
             </div>
             <div className='uppercase font-semibold text-sm md:border-r-2 px-5'>
               Timezone
               <div className='text-black font-semibold text-lg capitalize'>
-                UTC {initialdata ? initialdata.location.timezone : 'Loading...'}
+                {initialdata && initialdata.location ? `UTC ${initialdata.location.timezone}` : 'Loading...'}
               </div>
             </div>
 
